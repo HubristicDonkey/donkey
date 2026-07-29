@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer
       id="contact"
-      className="border-t border-parchment/10 px-5 pb-11 pt-16 sm:px-8 sm:pt-24 lg:px-[88px] lg:pt-[130px]"
+      className="scroll-mt-[100px] border-t border-parchment/10 px-5 pb-11 pt-16 sm:px-8 sm:pt-24 lg:px-[88px] lg:pt-[130px]"
     >
       <div className="mx-auto flex max-w-[1320px] flex-wrap gap-10 lg:gap-16">
         <div className="flex flex-[1_1_min(100%,420px)] flex-col gap-5.5">
@@ -40,10 +40,10 @@ export default function Footer() {
           <span className="text-xs tracking-[0.28em] text-stone-deep">
             Index
           </span>
-          <a href="#work">Work</a>
-          <a href="#motion">Approach</a>
-          <a href="#about">About</a>
-          <a href="#prints">Prints</a>
+          <a href="/#work">Work</a>
+          <a href="/#motion">Approach</a>
+          <a href="/#about">About</a>
+          <a href="/#prints">Prints</a>
           <Link href="/book">Book an event</Link>
         </div>
 

@@ -28,7 +28,7 @@ export default function PrintsTeaser() {
   return (
     <section
       id="prints"
-      className="border-t border-parchment/[0.08] px-5 py-20 sm:px-8 sm:py-28 lg:px-[88px] lg:py-36"
+      className="scroll-mt-[100px] border-t border-parchment/[0.08] px-5 py-20 sm:px-8 sm:py-28 lg:px-[88px] lg:py-36"
     >
       <div className="mx-auto max-w-[1320px]">
         <div className="mb-12 flex flex-wrap items-end justify-between gap-6 sm:mb-16">

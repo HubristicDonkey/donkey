@@ -6,7 +6,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="overflow-hidden px-5 py-16 pb-24 sm:px-8 sm:py-24 sm:pb-32 lg:px-[88px] lg:py-[120px] lg:pb-[180px]"
+      className="scroll-mt-[100px] overflow-hidden px-5 py-16 pb-24 sm:px-8 sm:py-24 sm:pb-32 lg:px-[88px] lg:py-[120px] lg:pb-[180px]"
     >
       <div className="mx-auto flex max-w-[1320px] flex-wrap items-start gap-14 lg:gap-24">
         <Reveal className="relative flex-[1_1_min(100%,360px)]">

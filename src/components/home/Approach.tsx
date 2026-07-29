@@ -3,11 +3,11 @@ import Reveal from "./Reveal";
 
 export default function Approach() {
   return (
-    <section id="motion" className="relative overflow-hidden">
+    <section id="motion" className="scroll-mt-[100px] relative overflow-hidden">
       <div className="relative h-[clamp(560px,96vh,1020px)] overflow-hidden">
         <Image
-          src="/images/long-exposure-hands.jpg"
-          alt="Long exposure of hands moving across an electric guitar in blue light"
+          src="/images/long-exposure-portrait.jpg"
+          alt="Singer reaching toward a cheering crowd, guitarist seated behind her under stage light"
           fill
           sizes="100vw"
           className="animate-breathe-slow object-cover object-[50%_40%]"

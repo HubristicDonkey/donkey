@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Reveal from "./Reveal";
@@ -18,17 +19,25 @@ const GALLERY = [
     src: "/images/work-portrait.jpg",
     alt: "Black and white profile of a performer under a wide brimmed hat",
     cap: "02 — Between songs",
-    tag: "Editorial",
+    tag: "Portrait",
     aspect: "aspect-[3/4]",
     flex: "flex-[1_1_min(100%,340px)]",
   },
   {
-    src: "/images/work-duo.jpg",
-    alt: "Duo performing against a brick wall in violet stage light",
-    cap: "03 — The room holds still",
+    src: "/images/work-stage-hats.jpg",
+    alt: "Two performers trading a look mid-song, one on acoustic guitar, under a chandelier's red light",
+    cap: "03 — Watching for the cue",
     tag: "Live events · Nightlife",
     aspect: "aspect-video",
     flex: "flex-[1_1_100%] mt-3 sm:mt-14",
+  },
+  {
+    src: "/images/work-motion-vocal.jpg",
+    alt: "Long exposure of a singer mid-shout, features blurred with motion",
+    cap: "04 — Every word felt",
+    tag: "Long exposure",
+    aspect: "aspect-[3/4]",
+    flex: "flex-[1_1_min(100%,380px)] mt-3 sm:mt-14",
   },
 ];
 
@@ -53,7 +62,7 @@ export default function Gallery() {
   }, [index, close, step]);
 
   return (
-    <section id="work" className="pb-20 sm:pb-32 lg:pb-40">
+    <section id="work" className="scroll-mt-[100px] pb-20 sm:pb-32 lg:pb-40">
       <div className="flex flex-wrap items-baseline justify-between gap-6 px-5 pb-12 sm:px-8 sm:pb-16 lg:px-[88px] lg:pb-24">
         <Reveal size="small">
           <h2 className="font-display font-light text-[2.2rem] leading-[1.06] tracking-[-0.015em] sm:text-6xl lg:text-[4.4rem]">
@@ -61,7 +70,7 @@ export default function Gallery() {
           </h2>
         </Reveal>
         <p className="text-xs tracking-[0.24em] uppercase text-stone-dim">
-          Three of many nights
+          Four of many nights
         </p>
       </div>
 
@@ -86,6 +95,15 @@ export default function Gallery() {
           </Reveal>
         ))}
       </div>
+
+      <Reveal size="small" className="mt-12 px-5 sm:mt-16 sm:px-8 lg:px-[88px]">
+        <Link
+          href="/work"
+          className="inline-block border-b border-parchment/25 pb-1.5 text-xs tracking-[0.2em] uppercase text-parchment transition-colors duration-500 hover:border-parchment/50"
+        >
+          Browse the full albums →
+        </Link>
+      </Reveal>
 
       <AnimatePresence>
         {index !== null && (

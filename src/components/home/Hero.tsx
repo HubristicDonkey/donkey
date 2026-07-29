@@ -8,7 +8,7 @@ export default function Hero() {
       className="relative h-[100svh] min-h-[620px] w-full overflow-hidden"
     >
       <Image
-        src="/images/hero-stage.jpg"
+        src="/images/long-exposure-crowd.jpg"
         alt="Performer on stage under green light, crowd reaching upward"
         fill
         priority
@@ -21,7 +21,7 @@ export default function Hero() {
       <div className="relative flex h-full flex-col justify-end gap-10 px-5 pb-14 sm:px-8 sm:pb-20 lg:px-[88px] lg:pb-[110px]">
         <div className="max-w-[1180px]">
           <p className="animate-fade-in [animation-delay:.5s] mb-7 text-xs font-normal tracking-[0.32em] uppercase text-stone">
-            Event &amp; editorial photography — worldwide
+            Event photography — worldwide
           </p>
           <h1 className="animate-fade-in [animation-delay:.65s] font-display font-light text-[2.9rem] leading-[0.96] tracking-[-0.018em] text-parchment text-pretty sm:text-7xl lg:text-8xl xl:text-[8rem]">
             Capturing movement,

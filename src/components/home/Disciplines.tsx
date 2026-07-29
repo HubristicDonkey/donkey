@@ -14,20 +14,15 @@ const DISCIPLINES = [
   {
     no: "03",
     title: "Sporting events",
-    note: "Stadium and touchline work, including tournament coverage at the 2022 World Cup in Qatar.",
+    note: "Stadium and touchline work, big occasion or small club night — I'm there for the single moment the crowd feels it and reacts as one.",
   },
   {
     no: "04",
-    title: "Editorial commissions",
-    note: "Assignments for magazines and festival journals — a narrative set, not a contact sheet.",
-  },
-  {
-    no: "05",
     title: "Corporate events",
     note: "Conferences, dinners and awards photographed quietly, in the venue’s own light.",
   },
   {
-    no: "06",
+    no: "05",
     title: "Private events",
     note: "Small, close, unposed — nobody gets arranged into a semi-circle and told to look natural.",
   },

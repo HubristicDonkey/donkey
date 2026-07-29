@@ -18,7 +18,7 @@ const jost = Jost({
 export const metadata: Metadata = {
   title: "Hubristic Donkey — Event Photography",
   description:
-    "Event and editorial photography, worldwide. Concerts, festivals, sport, and the quiet minutes nobody else is looking at.",
+    "Event photography, worldwide. Concerts, festivals, sport, and the quiet minutes nobody else is looking at.",
 };
 
 export default function RootLayout({

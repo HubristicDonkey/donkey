@@ -6,10 +6,10 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const NAV_LINKS = [
-  { href: "#work", label: "Work" },
-  { href: "#motion", label: "Approach" },
-  { href: "#about", label: "About" },
-  { href: "#prints", label: "Prints" },
+  { href: "/#work", label: "Work" },
+  { href: "/#motion", label: "Approach" },
+  { href: "/#about", label: "About" },
+  { href: "/#prints", label: "Prints" },
 ];
 
 export default function Header() {
@@ -18,7 +18,7 @@ export default function Header() {
   return (
     <>
       <header className="fixed inset-x-0 top-0 z-60 flex items-center justify-between gap-8 px-5 py-[22px] backdrop-blur-xl [backdrop-filter:blur(18px)_saturate(1.1)] bg-gradient-to-b from-ink/72 to-ink/28 border-b border-parchment/[0.07] sm:px-8 lg:px-14">
-        <a href="#top" className="flex items-center gap-3.5">
+        <a href="/#top" className="flex items-center gap-3.5">
           <Image
             src="/images/logo.png"
             alt="Hubristic Donkey"
@@ -38,7 +38,7 @@ export default function Header() {
               {link.label}
             </a>
           ))}
-          <a href="#contact" className="hover:text-parchment transition-colors duration-500">
+          <a href="/#contact" className="hover:text-parchment transition-colors duration-500">
             Contact
           </a>
         </nav>
