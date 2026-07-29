@@ -1,26 +1,81 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-ink: #0a0c0b;
+  --color-ink-soft: #0e1412;
+  --color-ink-deep: #06080b;
+  --color-parchment: #f2ede4;
+  --color-parchment-dim: #d6cbb9;
+  --color-parchment-soft: #e9e3d7;
+  --color-stone: #a2988a;
+  --color-stone-dim: #6f8189;
+  --color-stone-deep: #56635e;
+  --color-sage: #8fa39a;
+  --color-fern: #1c3a2e;
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #14251e;
+  color: #f2ede4;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(34px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes breathe {
+  from {
+    transform: scale(1.04);
+  }
+  to {
+    transform: scale(1.16);
+  }
+}
+
+@keyframes breathe-slow {
+  from {
+    transform: scale(1.02);
+  }
+  to {
+    transform: scale(1.12);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1.6s ease both;
+}
+
+.animate-breathe {
+  animation: breathe 26s ease-in-out infinite alternate;
+}
+
+.animate-breathe-slow {
+  animation: breathe-slow 34s ease-in-out infinite alternate;
 }
