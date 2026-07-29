@@ -28,7 +28,7 @@ export default function BookingForm() {
     data.forEach((value, key) => params.append(key, value.toString()));
 
     try {
-      const res = await fetch("/book", {
+      const res = await fetch("/__forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: params.toString(),
@@ -68,10 +68,6 @@ export default function BookingForm() {
     <Reveal size="small">
       <form
         name="booking"
-        method="POST"
-        action="/book"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
         onSubmit={handleSubmit}
         className="flex flex-col gap-9"
       >
