@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Reveal from "./Reveal";
 
-const ETSY_SHOP_URL = "#";
+const ETSY_SHOP_URL = "https://www.etsy.com/shop/HubristicDonkey";
 
 const PRINTS = [
   {
@@ -43,7 +43,7 @@ export default function PrintsTeaser() {
             </h2>
           </Reveal>
           <Reveal delay={0.1} className="max-w-[420px]">
-            <p className="text-[1.02rem] font-light leading-[1.8] text-stone text-pretty">
+            <p className="font-lora text-[1.02rem] leading-[1.8] text-stone text-pretty">
               No filters. No AI. Just light, patience, and a donkey-headed
               refusal to settle for ordinary. A small run of prints from the
               mountains and the quieter corners, available on Etsy.

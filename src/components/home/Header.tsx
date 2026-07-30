@@ -22,12 +22,12 @@ export default function Header() {
           <Image
             src="/images/logo.png"
             alt="Hubristic Donkey"
-            width={40}
-            height={40}
-            className="h-10 w-10 object-contain mix-blend-screen"
+            width={68}
+            height={68}
+            className="h-10 w-10 object-contain mix-blend-screen lg:h-[68px] lg:w-[68px]"
             priority
           />
-          <span className="font-display text-[19px] tracking-[0.16em] uppercase text-parchment whitespace-nowrap">
+          <span className="font-display text-[19px] tracking-[0.16em] uppercase text-parchment whitespace-nowrap lg:text-[34px] lg:tracking-[0.14em]">
             Hubristic Donkey
           </span>
         </a>
@@ -53,12 +53,17 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            aria-label="Menu"
+            aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
+            aria-controls="mobile-menu"
             className="flex flex-col gap-[5px] p-2.5 bg-transparent border-0 cursor-pointer"
           >
-            <span className="block h-px w-[22px] bg-parchment" />
-            <span className="block h-px w-[22px] bg-parchment" />
+            <span
+              className={`block h-px w-[22px] bg-parchment transition-transform duration-300 ${open ? "translate-y-[3px] rotate-45" : ""}`}
+            />
+            <span
+              className={`block h-px w-[22px] bg-parchment transition-transform duration-300 ${open ? "-translate-y-[3px] -rotate-45" : ""}`}
+            />
           </button>
         </div>
       </header>
@@ -66,6 +71,10 @@ export default function Header() {
       <AnimatePresence>
         {open && (
           <motion.div
+            id="mobile-menu"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Site menu"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

@@ -4,10 +4,15 @@ import Header from "@/components/home/Header";
 import Reveal from "@/components/home/Reveal";
 import BookingForm from "@/components/book/BookingForm";
 
+const TITLE = "Book an event — Hubristic Donkey";
+const DESCRIPTION =
+  "Start an enquiry for concerts, festivals, private events, or a landscape and wildlife commission.";
+
 export const metadata: Metadata = {
-  title: "Book an event — Hubristic Donkey",
-  description:
-    "Start an enquiry for concerts, festivals, private events, or a landscape and wildlife commission.",
+  title: TITLE,
+  description: DESCRIPTION,
+  openGraph: { title: TITLE, description: DESCRIPTION, url: "/book" },
+  twitter: { title: TITLE, description: DESCRIPTION },
 };
 
 export default function BookPage() {
@@ -46,7 +51,7 @@ export default function BookPage() {
               </h1>
             </Reveal>
             <Reveal delay={0.5}>
-              <p className="mb-10 max-w-[46ch] text-[1.02rem] font-light leading-[1.8] text-stone text-pretty">
+              <p className="font-lora mb-10 max-w-[46ch] text-[1.02rem] leading-[1.8] text-stone text-pretty">
                 A few details are enough to start. I reply to every enquiry
                 personally, usually within two days, and I only take on what
                 I can shoot properly.

@@ -22,21 +22,21 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="flex flex-[0_1_200px] flex-col gap-3.5 text-[13px] tracking-[0.12em] uppercase text-[#8b8377]">
+        <div className="flex flex-[0_1_200px] flex-col gap-3.5 text-[13px] tracking-[0.2em] uppercase text-stone-dim">
           <span className="text-xs tracking-[0.28em] text-stone-deep">
             Elsewhere
           </span>
           <a href="https://www.instagram.com/hubristic_donkey/" target="_blank" rel="noreferrer">
             Instagram
           </a>
-          <a href="#" target="_blank" rel="noreferrer">
+          <a href="https://www.etsy.com/shop/HubristicDonkey" target="_blank" rel="noreferrer">
             Etsy print shop
           </a>
           <a href="mailto:hello@hubristicdonkey.com">hello@hubristicdonkey.com</a>
           <Link href="/book">WhatsApp on request</Link>
         </div>
 
-        <div className="flex flex-[0_1_200px] flex-col gap-3.5 text-[13px] tracking-[0.12em] uppercase text-[#8b8377]">
+        <div className="flex flex-[0_1_200px] flex-col gap-3.5 text-[13px] tracking-[0.2em] uppercase text-stone-dim">
           <span className="text-xs tracking-[0.28em] text-stone-deep">
             Index
           </span>

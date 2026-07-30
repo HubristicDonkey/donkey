@@ -44,7 +44,7 @@ export default function Disciplines() {
               <h3 className="font-display font-light text-2xl leading-[1.14] tracking-[-0.01em] text-parchment sm:text-4xl">
                 {d.title}
               </h3>
-              <p className="col-span-2 mt-3 text-[0.98rem] font-light leading-[1.75] text-stone text-pretty sm:col-span-1 sm:mt-0">
+              <p className="font-lora col-span-2 mt-3 text-base leading-[1.8] text-stone text-pretty sm:col-span-1 sm:mt-0 lg:text-2xl lg:leading-[1.55]">
                 {d.note}
               </p>
             </div>

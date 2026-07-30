@@ -17,9 +17,21 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const { slug } = await params;
   const album = ALBUMS.find((a) => a.slug === slug);
   if (!album) return {};
+  const title = `${album.title} — Hubristic Donkey`;
   return {
-    title: `${album.title} — Hubristic Donkey`,
+    title,
     description: album.blurb,
+    openGraph: {
+      title,
+      description: album.blurb,
+      url: `/work/${album.slug}`,
+      images: [{ url: album.cover, width: 1200, height: 1500 }],
+    },
+    twitter: {
+      title,
+      description: album.blurb,
+      images: [album.cover],
+    },
   };
 }
 
@@ -45,7 +57,7 @@ export default async function AlbumPage({ params }: { params: Params }) {
             <h1 className="mb-5 font-display font-light text-[2.2rem] leading-[1.06] tracking-[-0.015em] text-parchment sm:text-6xl lg:text-[3.8rem]">
               {album.title}
             </h1>
-            <p className="text-[1.02rem] font-light leading-[1.8] text-stone text-pretty">
+            <p className="font-lora text-[1.02rem] leading-[1.8] text-stone text-pretty">
               {album.blurb}
             </p>
           </Reveal>

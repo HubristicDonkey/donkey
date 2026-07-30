@@ -8,36 +8,40 @@ import Reveal from "./Reveal";
 
 const GALLERY = [
   {
+    src: "/images/work-motion-vocal.jpg",
+    alt: "Long exposure of a singer mid-shout, features blurred with motion",
+    cap: "01 — Every word felt",
+    tag: "Long exposure",
+    aspect: "aspect-video",
+    flex: "flex-[1_1_100%]",
+    sizes: "100vw",
+  },
+  {
+    src: "/images/ZWOEL-3.jpg",
+    alt: "Long exposure of hair swinging through red and pink stage light, eyes closed, features blurred with motion",
+    cap: "02 — The only thing in focus was the motion",
+    tag: "Long exposure",
+    aspect: "aspect-video",
+    flex: "flex-[1_1_100%] mt-3 sm:mt-14",
+    sizes: "100vw",
+  },
+  {
     src: "/images/work-guitarist.jpg",
     alt: "Guitarist lit in green and red, reaching up the fretboard",
-    cap: "01 — Second set, O'Shea's",
+    cap: "03 — Second set, O'Shea's",
     tag: "Live music",
     aspect: "aspect-[4/5]",
-    flex: "flex-[1_1_min(100%,520px)]",
+    flex: "flex-[1_1_min(100%,520px)] mt-3 sm:mt-14",
+    sizes: "(min-width: 1024px) 520px, 100vw",
   },
   {
     src: "/images/work-portrait.jpg",
     alt: "Black and white profile of a performer under a wide brimmed hat",
-    cap: "02 — Between songs",
+    cap: "04 — Between songs",
     tag: "Portrait",
     aspect: "aspect-[3/4]",
     flex: "flex-[1_1_min(100%,340px)]",
-  },
-  {
-    src: "/images/work-stage-hats.jpg",
-    alt: "Two performers trading a look mid-song, one on acoustic guitar, under a chandelier's red light",
-    cap: "03 — Watching for the cue",
-    tag: "Live events · Nightlife",
-    aspect: "aspect-video",
-    flex: "flex-[1_1_100%] mt-3 sm:mt-14",
-  },
-  {
-    src: "/images/work-motion-vocal.jpg",
-    alt: "Long exposure of a singer mid-shout, features blurred with motion",
-    cap: "04 — Every word felt",
-    tag: "Long exposure",
-    aspect: "aspect-[3/4]",
-    flex: "flex-[1_1_min(100%,380px)] mt-3 sm:mt-14",
+    sizes: "(min-width: 1024px) 340px, 100vw",
   },
 ];
 
@@ -69,7 +73,7 @@ export default function Gallery() {
             Selected work
           </h2>
         </Reveal>
-        <p className="text-xs tracking-[0.24em] uppercase text-stone-dim">
+        <p className="text-2xl tracking-[0.2em] uppercase text-stone-dim">
           Four of many nights
         </p>
       </div>
@@ -83,7 +87,7 @@ export default function Gallery() {
                   src={item.src}
                   alt={item.alt}
                   fill
-                  sizes="(min-width: 1024px) 45vw, 100vw"
+                  sizes={item.sizes}
                   className="object-cover transition-transform duration-700 hover:scale-[1.03]"
                 />
               </div>
@@ -99,7 +103,7 @@ export default function Gallery() {
       <Reveal size="small" className="mt-12 px-5 sm:mt-16 sm:px-8 lg:px-[88px]">
         <Link
           href="/work"
-          className="inline-block border-b border-parchment/25 pb-1.5 text-xs tracking-[0.2em] uppercase text-parchment transition-colors duration-500 hover:border-parchment/50"
+          className="inline-block border-b border-parchment/45 pb-1.5 text-xs tracking-[0.2em] uppercase text-parchment transition-colors duration-500 hover:border-parchment/70 lg:text-lg"
         >
           Browse the full albums →
         </Link>

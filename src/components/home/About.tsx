@@ -25,34 +25,42 @@ export default function About() {
             About
           </p>
           <h2 className="font-display font-light text-[2rem] leading-[1.06] tracking-[-0.015em] sm:text-5xl lg:text-[3.8rem]">
-            I learned to wait
+            Stubborn enough
             <br />
-            before I learned to shoot.
+            to wait for the light.
           </h2>
-          <p className="text-[1.02rem] font-light leading-[1.85] text-parchment-dim/90 text-pretty">
+          <p className="font-lora text-base leading-[1.8] text-parchment-dim/90 text-pretty lg:text-2xl lg:leading-[1.55]">
             Long before any of this, I was standing on ridgelines waiting for
-            a cloud to move a shadow off a rock face — landscape and wildlife
-            photography, where patience is the entire method. That habit
-            never left. It just found new places to work.
+            a cloud to move a shadow off a rock face: landscape and wildlife
+            photography. And that spawned out of a natural magnetic
+            attraction of being outdoors and a natural convulsive reaction to
+            staring at any Microsoft suite document intended for the greater
+            good of creating &ldquo;stakeholder value&rdquo;.
           </p>
-          <p className="text-[1.02rem] font-light leading-[1.85] text-stone text-pretty">
+          <p className="font-lora text-base leading-[1.8] text-stone text-pretty lg:text-2xl lg:leading-[1.55]">
+            That camera never left. The curiosity about human experiences
+            grew. People became less annoying and, inspiring, actually. It
+            just found new places to work.
+          </p>
+          <p className="font-lora text-base leading-[1.8] text-stone text-pretty lg:text-2xl lg:leading-[1.55]">
             The event side of it came out of nowhere in particular. I was
-            going to shows because I loved live music, not because it was a
-            job — and at some point I started bringing a camera along out of
-            personal interest. The two instincts collided fast: read the
-            room&apos;s light before you raise a camera, find where the night
-            is going to break, and wait there.
+            going to shows and festivals a lot because I loved live music and
+            music in general. Never forget the power of music. And at some
+            point I started bringing a camera along out of personal interest.
+            The two instincts collided fast: read the room&apos;s light
+            before you raise the camera, find where the night is going to
+            break, and wait there.
           </p>
-          <p className="text-[1.02rem] font-light leading-[1.85] text-stone text-pretty">
+          <p className="font-lora text-base leading-[1.8] text-stone text-pretty lg:text-2xl lg:leading-[1.55]">
             In the edit I pull everything back toward earth: soft greens,
             blue-grey shadow, warm stone in the highlights, black that still
             holds detail. No saturation for its own sake. The photographs
             should look like the moment felt, not like a filter.
           </p>
-          <p className="text-[1.02rem] font-light leading-[1.85] text-stone text-pretty">
-            The landscape and wildlife work is still very much alive — a
-            small collection of fine art prints, for anyone who wants a
-            slower kind of image on their wall.
+          <p className="font-lora text-base leading-[1.8] text-stone text-pretty lg:text-2xl lg:leading-[1.55]">
+            The landscape and wildlife work is still very much alive. A small
+            collection of fine art prints, for anyone who wants a slower kind
+            of image on their wall.
           </p>
           <div className="mt-2 flex flex-wrap items-center gap-7">
             <Link

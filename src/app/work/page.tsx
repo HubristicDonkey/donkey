@@ -5,9 +5,14 @@ import Reveal from "@/components/home/Reveal";
 import AlbumCard from "@/components/work/AlbumCard";
 import { ALBUMS } from "@/lib/albums";
 
+const TITLE = "Albums — Hubristic Donkey";
+const DESCRIPTION = "Full nights, one gig at a time — browse the complete albums.";
+
 export const metadata: Metadata = {
-  title: "Albums — Hubristic Donkey",
-  description: "Full nights, one gig at a time — browse the complete albums.",
+  title: TITLE,
+  description: DESCRIPTION,
+  openGraph: { title: TITLE, description: DESCRIPTION, url: "/work" },
+  twitter: { title: TITLE, description: DESCRIPTION },
 };
 
 export default function WorkIndexPage() {

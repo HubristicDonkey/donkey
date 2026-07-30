@@ -24,7 +24,7 @@ export default function AlbumCard({ album, delay = 0 }: { album: Album; delay?: 
             {album.photos.length} photos
           </span>
         </div>
-        <p className="mt-2 max-w-[42ch] text-[0.95rem] font-light leading-[1.7] text-stone text-pretty">
+        <p className="font-lora mt-2 max-w-[42ch] text-[1.02rem] leading-[1.8] text-stone text-pretty">
           {album.blurb}
         </p>
       </Link>

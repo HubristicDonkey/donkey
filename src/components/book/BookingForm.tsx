@@ -14,13 +14,16 @@ const EVENT_TYPES = [
 ];
 
 type Status = "idle" | "submitting" | "success" | "error";
+type ErrorKind = "network" | "server" | null;
 
 export default function BookingForm() {
   const [status, setStatus] = useState<Status>("idle");
+  const [errorKind, setErrorKind] = useState<ErrorKind>(null);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setStatus("submitting");
+    setErrorKind(null);
 
     const form = event.currentTarget;
     const data = new FormData(form);
@@ -33,24 +36,34 @@ export default function BookingForm() {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: params.toString(),
       });
-      if (!res.ok) throw new Error("Submission failed");
+      if (!res.ok) {
+        setErrorKind("server");
+        setStatus("error");
+        return;
+      }
       setStatus("success");
       form.reset();
     } catch {
+      setErrorKind("network");
       setStatus("error");
     }
   }
 
   if (status === "success") {
     return (
-      <Reveal size="small" className="flex min-h-[360px] flex-col justify-center gap-4">
+      <Reveal
+        size="small"
+        role="status"
+        aria-live="polite"
+        className="flex min-h-[360px] flex-col justify-center gap-4"
+      >
         <p className="text-xs tracking-[0.32em] uppercase text-sage">
           Enquiry sent
         </p>
         <h2 className="font-display font-light text-3xl leading-[1.1] text-parchment sm:text-4xl">
           Thank you. I&apos;ll reply within two days.
         </h2>
-        <p className="max-w-[46ch] text-[1.02rem] font-light leading-[1.8] text-stone text-pretty">
+        <p className="font-lora max-w-[46ch] text-[1.02rem] leading-[1.8] text-stone text-pretty">
           If it&apos;s urgent, email{" "}
           <a
             href="mailto:hello@hubristicdonkey.com"
@@ -69,6 +82,7 @@ export default function BookingForm() {
       <form
         name="booking"
         onSubmit={handleSubmit}
+        aria-busy={status === "submitting"}
         className="flex flex-col gap-9"
       >
         <input type="hidden" name="form-name" value="booking" />
@@ -101,8 +115,10 @@ export default function BookingForm() {
         />
 
         {status === "error" && (
-          <p className="text-sm text-[#c98a6b]">
-            Something went wrong sending that — please try again, or email{" "}
+          <p role="alert" className="text-sm text-[#c98a6b]">
+            {errorKind === "network"
+              ? "Couldn't reach the server — check your connection and try again, or email "
+              : "Something went wrong sending that — please try again, or email "}
             <a href="mailto:hello@hubristicdonkey.com" className="underline">
               hello@hubristicdonkey.com
             </a>

@@ -14,6 +14,7 @@
   --color-fern: #1c3a2e;
   --font-display: var(--font-display);
   --font-body: var(--font-body);
+  --font-lora: var(--font-lora);
 }
 
 html {

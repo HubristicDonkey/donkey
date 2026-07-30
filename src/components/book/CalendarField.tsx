@@ -3,6 +3,9 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
+// Dates already booked — add to this list as enquiries are confirmed. Format: "YYYY-MM-DD".
+const BLACKOUT_DATES: string[] = [];
+
 const WEEKDAYS = ["S", "M", "T", "W", "T", "F", "S"];
 const MONTHS = [
   "January",
@@ -155,21 +158,26 @@ export default function CalendarField({
               {cells.map((date, i) => {
                 if (!date) return <span key={i} />;
                 const isPast = date < today;
+                const isBooked = BLACKOUT_DATES.includes(toISODate(date));
+                const isDisabled = isPast || isBooked;
                 const isSelected = selected !== null && isSameDay(date, selected);
                 return (
                   <button
                     key={i}
                     type="button"
-                    disabled={isPast}
+                    disabled={isDisabled}
+                    aria-label={
+                      isBooked ? `${formatDisplay(date)} — already booked` : formatDisplay(date)
+                    }
                     onClick={() => {
                       setSelected(date);
                       setOpen(false);
                     }}
-                    className={`mx-auto flex h-8 w-8 items-center justify-center rounded-full text-[13px] transition-colors duration-300 ${
+                    className={`relative mx-auto flex h-8 w-8 items-center justify-center rounded-full text-[13px] transition-colors duration-300 ${
                       isSelected
                         ? "bg-parchment text-ink"
-                        : isPast
-                          ? "cursor-not-allowed text-stone-deep/50"
+                        : isDisabled
+                          ? `cursor-not-allowed text-stone-deep/50 ${isBooked ? "line-through decoration-stone-deep/70" : ""}`
                           : "text-parchment-dim hover:bg-parchment/[0.1] hover:text-parchment"
                     }`}
                   >

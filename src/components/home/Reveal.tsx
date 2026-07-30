@@ -26,12 +26,16 @@ export default function Reveal({
   size = "default",
   delay = 0,
   duration = 1.1,
+  role,
+  "aria-live": ariaLive,
 }: {
   children: ReactNode;
   className?: string;
   size?: "default" | "small" | "fade";
   delay?: number;
   duration?: number;
+  role?: string;
+  "aria-live"?: "polite" | "assertive" | "off";
 }) {
   const set =
     size === "small" ? variantsSmall : size === "fade" ? variantsFade : variants;
@@ -39,6 +43,8 @@ export default function Reveal({
   return (
     <motion.div
       className={className}
+      role={role}
+      aria-live={ariaLive}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "0px 0px -10% 0px" }}
