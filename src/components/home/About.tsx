@@ -12,8 +12,8 @@ export default function About() {
         <Reveal className="relative flex-[1_1_min(100%,360px)]">
           <div className="relative aspect-[4/5] overflow-hidden bg-ink-soft">
             <Image
-              src="/images/about-portrait.jpg"
-              alt="Portrait of a singer lit in deep blue at the microphone"
+              src="/images/about-section.jpg"
+              alt="Photographer walking down a volcanic slope with a camera in hand"
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"
               className="animate-breathe-slow object-cover"
