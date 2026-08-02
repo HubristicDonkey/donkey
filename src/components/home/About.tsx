@@ -38,17 +38,17 @@ export default function About() {
             good of creating &ldquo;stakeholder value&rdquo;.
           </p>
           <p className="font-lora text-base leading-[1.8] text-stone text-pretty lg:text-2xl lg:leading-[1.55]">
-            That camera never left. It just found new places it draws inspiration from. The curiosity about human experiences
-            grew. People became less annoying and, inspiring, actually.
+            The event side came out of nowhere. I was going to shows and
+            festivals constantly, because I loved live music — never forget
+            the power of music. At some point I started bringing a camera
+            along, purely out of interest. The two instincts collided fast:
+            read the room&apos;s light before you raise the camera, find
+            where the night is going to reach its boiling point, and wait
+            there.
           </p>
           <p className="font-lora text-base leading-[1.8] text-stone text-pretty lg:text-2xl lg:leading-[1.55]">
-            The event side of it came out of nowhere in particular. I was
-            going to shows and festivals a lot because I loved live music and
-            music in general. Never forget the power of music. And at some
-            point I started bringing a camera along out of personal interest.
-            The two instincts collided fast: read the room&apos;s light
-            before you raise the camera, find where the night is going to
-            break, and wait there.
+            That camera never left. It just found new places it draws inspiration from. The curiosity about human experiences
+            grew. People became less annoying and, inspiring, actually.
           </p>
           <p className="font-lora text-base leading-[1.8] text-stone text-pretty lg:text-2xl lg:leading-[1.55]">
             The landscape and wildlife work is still very much alive. A small
