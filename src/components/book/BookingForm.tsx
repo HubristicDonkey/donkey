@@ -31,7 +31,7 @@ export default function BookingForm() {
     data.forEach((value, key) => params.append(key, value.toString()));
 
     try {
-      const res = await fetch("/__forms.html", {
+      const res = await fetch("/api/book", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: params.toString(),
@@ -80,12 +80,10 @@ export default function BookingForm() {
   return (
     <Reveal size="small">
       <form
-        name="booking"
         onSubmit={handleSubmit}
         aria-busy={status === "submitting"}
         className="flex flex-col gap-9"
       >
-        <input type="hidden" name="form-name" value="booking" />
         <p className="hidden">
           <label>
             Don&apos;t fill this out: <input name="bot-field" tabIndex={-1} autoComplete="off" />

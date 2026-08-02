@@ -52,12 +52,6 @@ export default function About() {
             break, and wait there.
           </p>
           <p className="font-lora text-base leading-[1.8] text-stone text-pretty lg:text-2xl lg:leading-[1.55]">
-            In the edit I pull everything back toward earth: soft greens,
-            blue-grey shadow, warm stone in the highlights, black that still
-            holds detail. No saturation for its own sake. The photographs
-            should look like the moment felt, not like a filter.
-          </p>
-          <p className="font-lora text-base leading-[1.8] text-stone text-pretty lg:text-2xl lg:leading-[1.55]">
             The landscape and wildlife work is still very much alive. A small
             collection of fine art prints, for anyone who wants a slower kind
             of image on their wall.
