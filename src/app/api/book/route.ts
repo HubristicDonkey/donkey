@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { buildConfirmationEmailHtml } from "@/lib/confirmationEmail";
 
 const RESEND_API_URL = "https://api.resend.com/emails";
 const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || "Hubristic Donkey <bookings@hubristicdonkey.com>";
@@ -61,6 +62,27 @@ export async function POST(request: Request) {
   if (!res.ok) {
     console.error("Resend error", res.status, await res.text());
     return NextResponse.json({ ok: false, error: "Failed to send" }, { status: 502 });
+  }
+
+  // Best-effort: the enquiry already reached us above, so a failure here
+  // shouldn't make the visitor think their submission was lost.
+  const confirmationRes = await fetch(RESEND_API_URL, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      from: FROM_EMAIL,
+      to: email,
+      reply_to: NOTIFY_EMAIL,
+      subject: "Enquiry received — Hubristic Donkey",
+      html: buildConfirmationEmailHtml({ name, eventType, date, location, phone, message }),
+    }),
+  });
+
+  if (!confirmationRes.ok) {
+    console.error("Resend confirmation error", confirmationRes.status, await confirmationRes.text());
   }
 
   return NextResponse.json({ ok: true });

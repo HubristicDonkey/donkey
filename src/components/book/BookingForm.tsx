@@ -63,16 +63,6 @@ export default function BookingForm() {
         <h2 className="font-display font-light text-3xl leading-[1.1] text-parchment sm:text-4xl">
           Thank you. I&apos;ll reply within two days.
         </h2>
-        <p className="font-lora max-w-[46ch] text-[1.02rem] leading-[1.8] text-stone text-pretty">
-          If it&apos;s urgent, email{" "}
-          <a
-            href="mailto:hello@hubristicdonkey.com"
-            className="border-b border-parchment/30 text-parchment"
-          >
-            hello@hubristicdonkey.com
-          </a>{" "}
-          directly.
-        </p>
       </Reveal>
     );
   }
@@ -117,8 +107,8 @@ export default function BookingForm() {
             {errorKind === "network"
               ? "Couldn't reach the server — check your connection and try again, or email "
               : "Something went wrong sending that — please try again, or email "}
-            <a href="mailto:hello@hubristicdonkey.com" className="underline">
-              hello@hubristicdonkey.com
+            <a href="mailto:ruben.vernon.visser@gmail.com" className="underline">
+              ruben.vernon.visser@gmail.com
             </a>
             .
           </p>
