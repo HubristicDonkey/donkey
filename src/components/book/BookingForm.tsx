@@ -96,7 +96,7 @@ export default function BookingForm() {
         </div>
 
         <TextareaField
-          label="Tell me about the evening"
+          label="Tell me about the occasion"
           name="message"
           required
           placeholder="What's happening, who's involved, what you're hoping to come away with."

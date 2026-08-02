@@ -47,7 +47,7 @@ export default function BookPage() {
               <h1 className="mb-4.5 font-display font-light text-[2.1rem] leading-[1.05] tracking-[-0.02em] text-parchment sm:text-5xl lg:text-[3.1rem]">
                 Tell me about
                 <br />
-                <em className="italic text-parchment-dim">the evening.</em>
+                <em className="italic text-parchment-dim">the occasion.</em>
               </h1>
             </Reveal>
             <Reveal delay={0.5}>
@@ -63,10 +63,10 @@ export default function BookPage() {
             <p className="mt-9 text-xs tracking-[0.2em] uppercase text-stone-dim">
               Prefer email?{" "}
               <a
-                href="mailto:hello@hubristicdonkey.com"
+                href="mailto:ruben.vernon.visser@gmail.com"
                 className="border-b border-parchment/20 text-parchment transition-colors duration-500 hover:border-parchment/40"
               >
-                hello@hubristicdonkey.com
+                ruben.vernon.visser@gmail.com
               </a>
             </p>
           </div>
