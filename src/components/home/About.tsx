@@ -16,7 +16,7 @@ export default function About() {
               alt="Photographer walking down a volcanic slope with a camera in hand"
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"
-              className="animate-breathe-slow object-cover"
+              className="animate-breathe-slow object-cover object-bottom"
             />
           </div>
         </Reveal>
@@ -32,15 +32,14 @@ export default function About() {
           <p className="font-lora text-base leading-[1.8] text-parchment-dim/90 text-pretty lg:text-2xl lg:leading-[1.55]">
             Long before any of this, I was standing on ridgelines waiting for
             a cloud to move a shadow off a rock face: landscape and wildlife
-            photography. And that spawned out of a natural magnetic
+            photography. That spawned out of a natural magnetic
             attraction of being outdoors and a natural convulsive reaction to
             staring at any Microsoft suite document intended for the greater
             good of creating &ldquo;stakeholder value&rdquo;.
           </p>
           <p className="font-lora text-base leading-[1.8] text-stone text-pretty lg:text-2xl lg:leading-[1.55]">
-            That camera never left. The curiosity about human experiences
-            grew. People became less annoying and, inspiring, actually. It
-            just found new places to work.
+            That camera never left. It just found new places it draws inspiration from. The curiosity about human experiences
+            grew. People became less annoying and, inspiring, actually.
           </p>
           <p className="font-lora text-base leading-[1.8] text-stone text-pretty lg:text-2xl lg:leading-[1.55]">
             The event side of it came out of nowhere in particular. I was
