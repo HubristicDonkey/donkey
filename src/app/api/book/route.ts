@@ -3,8 +3,8 @@ import { buildConfirmationEmailHtml } from "@/lib/confirmationEmail";
 
 const RESEND_API_URL = "https://api.resend.com/emails";
 const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || "Hubristic Donkey <bookings@hubristicdonkey.com>";
-// TODO: switch back to hello@hubristicdonkey.com once that inbox is set up.
-const NOTIFY_EMAIL = process.env.BOOKING_NOTIFY_EMAIL || "ruben.vernon.visser@gmail.com";
+// TODO: switch to hello@hubristicdonkey.com once that inbox is set up.
+const NOTIFY_EMAIL = process.env.BOOKING_NOTIFY_EMAIL || "hubristicdonkey@gmail.com";
 
 export async function POST(request: Request) {
   const data = await request.formData();
