@@ -107,8 +107,8 @@ export default function BookingForm() {
             {errorKind === "network"
               ? "Couldn't reach the server — check your connection and try again, or email "
               : "Something went wrong sending that — please try again, or email "}
-            <a href="mailto:ruben.vernon.visser@gmail.com" className="underline">
-              ruben.vernon.visser@gmail.com
+            <a href="mailto:hubristicdonkey@gmail.com" className="underline">
+              hubristicdonkey@gmail.com
             </a>
             .
           </p>

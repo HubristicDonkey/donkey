@@ -63,10 +63,10 @@ export default function BookPage() {
             <p className="mt-9 text-xs tracking-[0.2em] uppercase text-stone-dim">
               Prefer email?{" "}
               <a
-                href="mailto:ruben.vernon.visser@gmail.com"
+                href="mailto:hubristicdonkey@gmail.com"
                 className="border-b border-parchment/20 text-parchment transition-colors duration-500 hover:border-parchment/40"
               >
-                ruben.vernon.visser@gmail.com
+                hubristicdonkey@gmail.com
               </a>
             </p>
           </div>
