@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/home/Reveal";
 import type { Album } from "@/lib/albums";
@@ -7,13 +6,15 @@ export default function AlbumCard({ album, delay = 0 }: { album: Album; delay?: 
   return (
     <Reveal size="small" delay={delay}>
       <Link href={`/work/${album.slug}`} className="group block">
-        <div className="relative aspect-[4/5] overflow-hidden bg-ink-soft">
-          <Image
+        <div className="relative overflow-hidden bg-ink-soft">
+          {/* Plain img rather than next/image: masonry needs each cover to render at
+              its own natural aspect ratio, which next/image's fill mode (needing a
+              pre-sized parent) can't give us without hardcoding per-image dimensions. */}
+          <img
             src={album.cover}
             alt={album.title}
-            fill
-            sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw"
-            className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+            loading="lazy"
+            className="block w-full h-auto object-cover transition-transform duration-700 group-hover:scale-[1.03]"
           />
         </div>
         <div className="mt-4.5 flex items-baseline justify-between gap-4">

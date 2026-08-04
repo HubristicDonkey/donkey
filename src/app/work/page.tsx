@@ -33,9 +33,11 @@ export default function WorkIndexPage() {
             </h1>
           </Reveal>
 
-          <div className="grid grid-cols-1 gap-14 sm:grid-cols-2 sm:gap-x-10 sm:gap-y-16 lg:grid-cols-3">
+          <div className="columns-1 sm:columns-2 sm:gap-x-10 lg:columns-3">
             {ALBUMS.map((album, i) => (
-              <AlbumCard key={album.slug} album={album} delay={(i % 3) * 0.06} />
+              <div key={album.slug} className="mb-14 break-inside-avoid sm:mb-16">
+                <AlbumCard album={album} delay={(i % 3) * 0.06} />
+              </div>
             ))}
           </div>
         </div>
